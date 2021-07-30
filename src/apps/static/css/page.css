@@ -1,0 +1,17 @@
+.ms-auto {
+    margin-left: auto !important;
+}
+
+.navbar-brand-border-top {
+    border-top: 4px solid #212529 !important
+}
+
+
+@media (min-width: 992px) {
+    .navbar-shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        transition: all ease-in .3s;
+    }
+    
+}

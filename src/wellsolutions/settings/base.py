@@ -24,9 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-wellsolutions-xxxxxxxxxx-pruebas'
 
-
-
-
 # Application definition
 
 DJANGO_APPS = [
@@ -42,6 +39,7 @@ APPS_THIRD_PARTY = [
 ]  
     
 APPS = [   
+    'apps.sitio.apps.SitioConfig',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +57,9 @@ ROOT_URLCONF = 'wellsolutions.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'apps' / 'templates' 
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,6 +111,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'apps' / 'static',
+]
+
+
+# Media file
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
