@@ -11,7 +11,13 @@ DATABASES = {
     }
 }
 
+# Appliacciones
+
 INSTALLED_APPS = DJANGO_APPS + APPS_THIRD_PARTY + APPS
+
+# Email
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 

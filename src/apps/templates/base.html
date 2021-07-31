@@ -10,7 +10,13 @@
     <title>{% block title %}{% endblock %}</title>
     {% block extra_styles %}{% endblock %}
 </head>
-<body>
+<body class="overflow-hidden">
+    <div id="spinner" class="d-flex justify-content-center vh-100 w-100 position-fixed top-0 left-0 z-index-max">
+        <div class="spinner-border text-primary position-absolute top-50 start-50" style="width: 6rem; height: 6rem;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <!-- START HEADER -->
     {% include "includes/layout/header.html" %}
     <!-- END HEADER -->
@@ -21,7 +27,13 @@
 
     <!-- START CONTENT -->
     <div id="main" class="container p-3">
-    {% block content %}{% endblock %}
+        <!-- START QUIENES-SOMOS -->
+        {% include "includes/content/quienes-somos.html" %}
+        <!-- END QUINENES-SOMOS -->
+
+        <!-- START CONTACTO -->
+        {% include "includes/content/contacto.html" %}
+        <!-- END CONTACTO -->
     </div>
     <!-- END CONTENT -->
 
