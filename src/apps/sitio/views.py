@@ -1,5 +1,6 @@
 
 from django.core.mail import BadHeaderError, send_mail
+from django.template.response import TemplateResponse
 from django.views.generic.base import TemplateView
 from django.views.generic import FormView
 from django.urls import reverse_lazy
@@ -45,3 +46,15 @@ class SendEmailView(FormView):
             except BadHeaderError:
                 pass
 
+
+def handler404(request, *args, **kwargs):
+    context = { 'codigo': 404, 'descripcion': 'No se encontró la página que busca.'}
+    response = TemplateResponse(request, 'http/status_code.html', context)
+    response.status_code = 404
+    return response
+
+def handler500(request, *args, **kwargs):
+    context = { 'codigo': 500, 'descripcion': 'Ocurrio un error en el servidor, vuelva a intentarlo mas tarde.'}
+    response = TemplateResponse(request, 'http/status_code.html', context)
+    response.status_code = 500
+    return response

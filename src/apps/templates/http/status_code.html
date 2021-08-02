@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap@5.0.2/custom.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/page.css' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}">
+    <title>WellSolutions</title>
+</head>
+<body class="bg-light">
+    <div class="container align-middle vh-100 w-100">
+        <div class="position-relative h-100 w-100 text-center">
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <p class="fs-1 text d-inline" style="font-size: 6rem !important;">
+                    {{ codigo }}
+                </p>
+                <p class="fs-4">
+                    {{ descripcion }}
+                </p>
+                <p>
+                    <a class="btn text-white {% if codigo == 500 %}btn-danger{% else %}btn-info{% endif %}" href="{% url 'sitio:index' %}" role="button">Regresar al Inicio</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

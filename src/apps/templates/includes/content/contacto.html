@@ -6,7 +6,7 @@
             <hr>
         </div>
         <div class="col col-12 col-sm-6 col-md-6">
-            <form method="POST" action="{% url 'sitio:send_email' %}">
+            <form id="form-email" method="POST" action="{% url 'sitio:send_email' %}">
                 {% csrf_token %}
                 <div class="mb-3">
                     <label for="nombre" class="form-label fw-bold">Nombres y Apellidos</label>
@@ -22,7 +22,7 @@
                     <label for="mensaje" class="form-label fw-bold">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" rows="5" class="form-control rounded-3" aria-label="With textarea" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary text-white rounded-pill pl-5 pr-5">Enviar Correo</button>
+                <button id="btn-enviar-correo" type="submit" class="btn btn-primary text-white rounded-pill pl-5 pr-5">Enviar Correo</button>
             </form>
 
             {% if request.GET %}

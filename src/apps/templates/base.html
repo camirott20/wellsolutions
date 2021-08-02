@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap@5.0.2/custom.min.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/page.css' %}">
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}">
+    <title>WellSolutions{% block title %}{% endblock %}</title>
     {% block extra_styles %}{% endblock %}
 </head>
-<body class="overflow-hidden">
+<body id="inicio">
     <div id="spinner" class="d-flex justify-content-center vh-100 w-100 position-fixed top-0 left-0 z-index-max">
         <div class="spinner-border text-primary position-absolute top-50 start-50" style="width: 6rem; height: 6rem;" role="status">
           <span class="visually-hidden">Loading...</span>
@@ -28,7 +31,7 @@
     <!-- START CONTENT -->
     <div id="main" class="container p-3">
         <!-- START QUIENES-SOMOS -->
-        {% include "includes/content/quienes-somos.html" %}
+        {% include "includes/content/nosotros.html" %}
         <!-- END QUINENES-SOMOS -->
 
         <!-- START CONTACTO -->
@@ -40,6 +43,8 @@
     <!-- START FOOTER -->
     {% include "includes/layout/footer.html" %}
     <!-- END FOOTER -->
+
+    <button id="btn-go-up" type="button" class="btn btn-danger rounded-circle shadow-lg position-fixed text-white bottom-0 end-0 fs-5 mb-3 me-3 d-none">^</button>
 
     <script src="{% static 'js/bootstrap@5.0.2/bootstrap.bundle.js' %}"></script>
     <script src="{% static 'js/page.js' %}"></script>
