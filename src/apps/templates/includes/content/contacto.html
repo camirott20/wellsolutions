@@ -1,0 +1,52 @@
+{% load static %}
+<section id="contacto" class="my-5">
+    <div class="row">
+        <div class="col col-12 col-sm-6 col-md-6">
+            <p class="fs-1">Contáctanos</p>
+            <hr>
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6">
+            <form method="POST" action="{% url 'sitio:send_email' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="nombre" class="form-label fw-bold">Nombres y Apellidos</label>
+                    <input type="text" class="form-control rounded-pill" id="nombre" name="nombre" placeholder="Nombres y Apellidos" aria-describedby="nombreHelp" required/>
+                    <div id="nombreHelp" class="form-text">Ejemplo: Pepito Perez</div>
+                </div>
+                <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Correo Electrónico</label>
+                <input type="email" class="form-control rounded-pill" id="email" name="email" aria-describedby="emailHelp" placeholder="Correo Eletrónico" required/>
+                <div id="emailHelp" class="form-text">Ejemplo: pepito.perez@dominio.com</div>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label fw-bold">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" class="form-control rounded-3" aria-label="With textarea" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary text-white rounded-pill pl-5 pr-5">Enviar Correo</button>
+            </form>
+
+            {% if request.GET %}
+                {% if 'sent' in request.GET %}
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Exito: </strong> El correo se envio correctamente.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+                {% elif 'fail' in request.GET %}
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error: </strong> No se puedo enviar el correo.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+
+</section>

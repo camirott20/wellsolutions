@@ -1,3 +1,12 @@
+var redirectTo = function () {
+    var queryParams = new URLSearchParams(location.search)
+    if (queryParams.has("sent") || queryParams.has("fail")) {
+        var element = document.querySelector('#contacto')
+        if (element)
+            window.scrollTo(0, element.offsetTop);
+    }
+}
+
 document.querySelectorAll('.dropdown-toggle').forEach(item => {
     item.addEventListener('click', event => {
 
@@ -21,9 +30,25 @@ var navbarShrink = function () {
         navbarCollapsible.classList.add('navbar-shrink', 'shadow-lg');
 };
 
- // Shrink the navbar 
- navbarShrink();
+var hiddenSpinner = function () {
+    setTimeout(function () {
+        document.body.classList.remove("overflow-hidden");
+    
+        const spinner = document.body.querySelector("#spinner")
+
+        if (spinner) {
+            spinner.classList.add("d-none");
+    }
+    }, 500);
+}
 
  // Shrink the navbar when page is scrolled
  document.addEventListener('scroll', navbarShrink);
+
+
+ // Shrink the navbar 
+ navbarShrink();
+ hiddenSpinner();
+ redirectTo();
+
   

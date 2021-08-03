@@ -3,9 +3,16 @@
 }
 
 .navbar-brand-border-top {
-    border-top: 4px solid #212529 !important
+    border-top: 4px solid #00d1b2 !important
 }
 
+.nav-tabs:not(.nav-tabs-neutral)>.nav-item>.nav-link.active {
+    box-shadow: 0px 5px 35px 0px rgb(0 0 0 / 30%)
+}
+
+.z-index-max {
+    z-index: 2000;
+}
 
 @media (min-width: 992px) {
     .navbar-shrink {
