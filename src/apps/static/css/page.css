@@ -1,3 +1,7 @@
+html.scroll-behavior-auto {
+    scroll-behavior: auto !important;
+}
+
 .ms-auto {
     margin-left: auto !important;
 }
@@ -20,5 +24,16 @@
         padding-bottom: 0;
         transition: all ease-in .3s;
     }
-    
+}
+
+#navigationList > li > a.active, 
+#navigationList > li > a:hover {
+    color: #00d1b2 !important;
+    font-weight: 400;
+    border-bottom: 2px solid #00d1b2;
+    transition: color ease .5s;
+}
+
+footer a:hover {
+    color: #00d1b2 !important;
 }
