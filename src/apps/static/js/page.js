@@ -120,6 +120,27 @@ var form_valid = function () {
     return false;
 }
 
+var showModal = function (e) {
+    var cardId = e.target.id.replace("link", "card");
+    var card = document.getElementById(cardId);
+    var modal = document.getElementById('modalServicios');
+    var cardTitle = card.querySelector('.card-title');
+    var modalTitle = modal.querySelector('.modal-title');
+    var cardTContent = card.querySelector('.card-text');
+    var modalBody = modal.querySelector('.modal-body');
+
+    modalTitle.innerHTML = cardTitle.innerHTML;
+    modalBody.innerHTML = cardTContent.innerHTML
+
+    modal.classList.add('d-block');
+    
+}
+
+var triggerClickModal = function () {
+    var links = document.querySelectorAll("[id^=link-]");
+    links.forEach(link => link.addEventListener('click', showModal));
+}
+
 document.getElementById("btn-enviar-correo").addEventListener('click', form_valid);
 document.addEventListener('scroll', navbarShadow);
 btnGoUp.addEventListener('click', goUp);
@@ -128,3 +149,4 @@ onscroll();
 navbarShadow();
 hiddenSpinner();
 redirectTo();  
+triggerClickModal();

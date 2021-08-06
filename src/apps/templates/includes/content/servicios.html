@@ -1,3 +1,4 @@
+{% load static %}
 <section id="servicios" class="my-5">
 
     <div class="row my-5">
@@ -7,4 +8,95 @@
       </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card servicios-card" id="card-1" data-bs-toggle="modal" data-bs-target="#modalServicios1">
+                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+                <div class="card-body">
+                    <h5 class="card-title">Aseguramiento</h5>
+                    <p class="card-text">
+                        Servicios de aseguramiento, asesoría y control de calidad de
+                        procesos internos de reparación, mantenimiento <span class="text-primary">...</span>
+                    </p>
+
+                    <a id="link-1" class="btn btn-link text-decoration-none">Leer mas</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card servicios-card" >
+                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+                <div class="card-body">
+                    <h5 class="card-title">Análisis de fallos</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card servicios-card" >
+                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+                <div class="card-body">
+                    <h5 class="card-title">Análisis de materiales</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card servicios-card" >
+                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+                <div class="card-body">
+                    <h5 class="card-title">Simulaciones</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="card servicios-card" >
+                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+                <div class="card-body">
+                    <h5 class="card-title">Logística</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+
+
+<div class="modal fade" id="modalServicios1" tabindex="-1" aria-labelledby="modalServicios1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" >Aseguramiento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Servicios de aseguramiento, asesoría y control de calidad de
+            procesos internos de reparación, mantenimiento 
+            e inspección para equipos y herramientas en la industria de Petróleo y Gas
+            Nuestra filosofía de trabajo se basa en una constante
+            retroalimentación entre las partes involucradas con el fin de lograr
+            un ambiente de trabajo ético y confiable en la búsqueda de la
+            mejora continua. Brindando un aseguramiento integral con
+            personal de experiencia en el área de colgadores, completamiento
+            y accesorios de cementación.
+
+            Experiencia y conocimiento en el ensamble y manejo de
+            herramientas de fondo (Liner Hangers, Completamiento,
+            accesorios de cementación).
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
