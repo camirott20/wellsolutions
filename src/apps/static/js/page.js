@@ -1,6 +1,7 @@
-const navbar = document.body.querySelector('#navbar');
-const navigationList = navbar.querySelectorAll('#navigationList > li > a');
-const btnGoUp = document.getElementById("btn-go-up");
+var navbar = document.body.querySelector('#navbar');
+var navigationList = navbar.querySelectorAll('#navigationList > li > a');
+var btnGoUp = document.getElementById("btn-go-up");
+var modal = document.getElementById('modalServicios')
 
 if (navbar) {
     new bootstrap.ScrollSpy(document.body, {
@@ -121,32 +122,34 @@ var form_valid = function () {
 }
 
 var showModal = function (e) {
-    var cardId = e.target.id.replace("link", "card");
-    var card = document.getElementById(cardId);
-    var modal = document.getElementById('modalServicios');
-    var cardTitle = card.querySelector('.card-title');
+    var card = e.relatedTarget;
+
+    var modalImgService = document.getElementById("modal-img-service")
     var modalTitle = modal.querySelector('.modal-title');
-    var cardTContent = card.querySelector('.card-text');
-    var modalBody = modal.querySelector('.modal-body');
+    var modalBodyText = modal.querySelector('#modal-body-text');
+    var imgService = card.querySelector("img")
+    var titleService = card.querySelector('[id^=title-service]');
+    var contentService = card.querySelector('[id^=content-service]');
 
-    modalTitle.innerHTML = cardTitle.innerHTML;
-    modalBody.innerHTML = cardTContent.innerHTML
-
-    modal.classList.add('d-block');
-    
+    modalImgService.src = imgService.src;
+    modalTitle.innerHTML = titleService.innerHTML;
+    modalBodyText.innerHTML = contentService.innerHTML;
 }
 
-var triggerClickModal = function () {
-    var links = document.querySelectorAll("[id^=link-]");
-    links.forEach(link => link.addEventListener('click', showModal));
+var hideModal = function (e) {
+    modal.querySelector("#modal-img-service").src = "";
+    modal.querySelector(".modal-title").innerText = "";
+    modal.querySelector("#modal-body-text").innerHTML = "";
 }
+
 
 document.getElementById("btn-enviar-correo").addEventListener('click', form_valid);
 document.addEventListener('scroll', navbarShadow);
 btnGoUp.addEventListener('click', goUp);
+modal.addEventListener('show.bs.modal', showModal);
+modal.addEventListener('hidden.bs.modal', hideModal);
 
 onscroll();
 navbarShadow();
 hiddenSpinner();
 redirectTo();  
-triggerClickModal();

@@ -10,60 +10,122 @@
 
     <div class="row">
         <div class="col-md-6 col-lg-4 mb-5">
-            <div class="card servicios-card" id="card-1" data-bs-toggle="modal" data-bs-target="#modalServicios1">
-                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+            <div class="card servicios-card" id="card-service-1" data-bs-toggle="modal" data-bs-target="#modalServicios">
+                <img class="img-fluid w-100" src="{% static 'img/servicios/aseguramiento.png' %}" alt="No image" style="max-width: 286px;"/>
                 <div class="card-body">
-                    <h5 class="card-title">Aseguramiento</h5>
+                    <h5 id="title-service-1" class="card-title">Aseguramiento</h5>
                     <p class="card-text">
                         Servicios de aseguramiento, asesoría y control de calidad de
                         procesos internos de reparación, mantenimiento <span class="text-primary">...</span>
                     </p>
 
-                    <a id="link-1" class="btn btn-link text-decoration-none">Leer mas</a>
+                    <a id="link-service-1" class="btn btn-link text-decoration-none">Leer mas</a>
+
+                    <p id="content-service-1" class="d-none">
+                        Servicios de aseguramiento, asesoría y control de calidad de
+                        procesos internos de reparación, mantenimiento 
+                        e inspección para equipos y herramientas en la industria de Petróleo y Gas
+                        Nuestra filosofía de trabajo se basa en una constante
+                        retroalimentación entre las partes involucradas con el fin de lograr
+                        un ambiente de trabajo ético y confiable en la búsqueda de la
+                        mejora continua. Brindando un aseguramiento integral con
+                        personal de experiencia en el área de colgadores, completamiento
+                        y accesorios de cementación.
+            
+                        Experiencia y conocimiento en el ensamble y manejo de
+                        herramientas de fondo (Liner Hangers, Completamiento,
+                        accesorios de cementación).
+                    </p>    
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-5">
-            <div class="card servicios-card" >
-                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+            <div class="card servicios-card" id="card-service-2" data-bs-toggle="modal" data-bs-target="#modalServicios" >
+                <img class="img-fluid" src="{% static 'img/no-image-found.png' %}" alt="No image" />
                 <div class="card-body">
-                    <h5 class="card-title">Análisis de fallos</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                    <h5 id="title-service-2" class="card-title">Análisis de fallos</h5>
+                    <p class="card-text">
+                        Anañlisis <span class="text-primary">...</span>
+                    </p>
+                    <a id="link-service-2" class="btn btn-link text-decoration-none">Leer mas</a>
+                    <p id="content-service-2" class="d-none">
+                        Analisis de fallos
+                    </p>    
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-5">
-            <div class="card servicios-card" >
-                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+            <div class="card servicios-card" id="card-service-3" data-bs-toggle="modal" data-bs-target="#modalServicios" >
+                <img class="img-fluid" src="{% static 'img/no-image-found.png' %}" alt="No image" />
                 <div class="card-body">
-                    <h5 class="card-title">Análisis de materiales</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                    <h5 id="title-service-3" class="card-title">Análisis de materiales</h5>
+                    <p class="card-text">
+                        La falla de materiales siempre es un evento
+                        indeseado en la industria, ya que trae como principales <span class="text-primary">...</span>
+                    </p>
+                    <a id="link-service-3" class="btn btn-link text-decoration-none">Leer mas</a>
+                    <p id="content-service-3" class="d-none">
+                        La falla de materiales siempre es un evento
+                        indeseado en la industria, ya que trae como principales consecuencias
+                        daños en equipos y sistemas, disminución o detención de producción, y
+                        pérdidas económicas asociadas a estos, además de poner en riesgo la
+                        seguridad de los trabajadores. La importancia del análisis de falla radica en
+                        determinar el origen o causas que generaron la falla, con el fin de tomar las
+                        medidas necesaria para prevenir nuevamente su ocurrencia.
+                    </p>    
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-5">
-            <div class="card servicios-card" >
-                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+            <div class="card servicios-card" id="card-service-4" data-bs-toggle="modal" data-bs-target="#modalServicios" >
+                <img class="img-fluid w-100" src="{% static 'img/servicios/simulaciones.png' %}" alt="No image" />
                 <div class="card-body">
-                    <h5 class="card-title">Simulaciones</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                    <h5 id="title-service-4" class="card-title">Simulaciones</h5>
+                    <p class="card-text">
+                        Simulanes de torque hidráulica centralización y surgencia.
+                        Ofrecemos servicio de realización de simulaciones <span class="text-primary">...</span>
+                    </p>
+                    <a id="link-service-4" class="btn btn-link text-decoration-none">Leer mas</a>
+                    <div id="content-service-4" class="d-none">
+                        <strong>Simulanes de torque hidráulica centralización y surgencia.</strong>
+                        Ofrecemos servicio de realización de simulaciones, para el correcto
+                        análisis del comportamiento del pozo durante las operaciones de
+                        bajada de revestimiento, bajada de Liner. Analizando todos los
+                        factores que intervienen en este tipo de actividades para ofrecer
+                        un asesoramiento durante la creación de los procedimientos
+                        operacionales de corrida.
+                    </div>    
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-5">
-            <div class="card servicios-card" >
-                <img class="img-fluid opacity-7" src="{% static 'img/no-image-found.png' %}" alt="No image" />
+            <div class="card servicios-card" id="card-service-5" data-bs-toggle="modal" data-bs-target="#modalServicios" >
+                <img class="img-fluid" src="{% static 'img/servicios/logistica.jpg' %}" alt="No image" />
                 <div class="card-body">
-                    <h5 class="card-title">Logística</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a class="btn btn-link text-decoration-none">Leer mas</a>
+                    <h5 id="title-service-5" class="card-title">Logística</h5>
+                    <p class="card-text">
+                        Servicios de logística Transporte terrestre HIAB viajes locales y foráneos.       
+                        Renta de tracto camión quinta rueda con plana.<span class="text-primary">...</span>
+                    </p>
+                    <a id="link-service-5" class="btn btn-link text-decoration-none">Leer mas</a>
+                    <div id="content-service-5" class="d-none">
+                        <ul class="list-group py-3">
+                            <li class="list-group-item">Servicios de logística Transporte terrestre HIAB viajes locales y foráneos.</li>
+
+                            <li class="list-group-item">Renta de tracto camión quinta rueda con plana.</li>
+                            <li class="list-group-item">Maniobra integral de carga pesada.</li>
+                            <li class="list-group-item">Renta de gruas 35, 45, 60, 80 y 100 toneladas.</li>
+                            <li class="list-group-item">Renta de tracto camión quinta rueda con lowboy.</li>
+                            <li class="list-group-item">Renta de camioneta 4 toneladas con HIAB de 1.5 toneladas.</li>
+                            <li class="list-group-item">Renta de HIAB con capacidad de 7 y 9 toneladas.</li>
+                            <li class="list-group-item">Tracto camión con plana a 12 mts Plana a 14 mts Plana a 16 mts Planas expandibles.</li>
+                            <li class="list-group-item">Tracto camión con cama baja</li>
+                          </ul>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -71,28 +133,18 @@
 </section>
 
 
-
-<div class="modal fade" id="modalServicios1" tabindex="-1" aria-labelledby="modalServicios1" aria-hidden="true">
+<div class="modal fade" id="modalServicios" tabindex="-1" aria-labelledby="modalServiciosLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" >Aseguramiento</h5>
+          <h5 class="modal-title" ></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-            Servicios de aseguramiento, asesoría y control de calidad de
-            procesos internos de reparación, mantenimiento 
-            e inspección para equipos y herramientas en la industria de Petróleo y Gas
-            Nuestra filosofía de trabajo se basa en una constante
-            retroalimentación entre las partes involucradas con el fin de lograr
-            un ambiente de trabajo ético y confiable en la búsqueda de la
-            mejora continua. Brindando un aseguramiento integral con
-            personal de experiencia en el área de colgadores, completamiento
-            y accesorios de cementación.
-
-            Experiencia y conocimiento en el ensamble y manejo de
-            herramientas de fondo (Liner Hangers, Completamiento,
-            accesorios de cementación).
+        <div class="modal-body">       
+            <div class="d-block p-2">
+                <img id="modal-img-service" class="img-fluid w-100"  alt="No image" />
+            </div>
+            <p id="modal-body-text"></p> 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Cerrar</button>
