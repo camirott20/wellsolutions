@@ -1,3 +1,4 @@
+{% load static %}
 <section id="noticias" class="my-5">
 
     <div class="row my-5">
@@ -6,5 +7,164 @@
           <hr>
       </div>
     </div>
+          
+          <section class="noticias" data-section="section1">
+            <div class="container">
+              
+              <div class="left-image-post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="left-image">
+                      <img class="img-fluid " src="{% static 'img/noticias/noti1.jpg' %}" alt="No image" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="right-text">
+                      <h4>Petrolera italiana ENI descubre nuevo yacimiento de petróleo en el Golfo de México</h4>
+                      <p>
+                        La petrolera italiana Ente Nazionale Idrocarburi (ENI) anunció este lunes el descubrimiento de un yacimiento de petróleo en costas de México que, 
+                        según sus estimaciones, podría contener reservas de hasta 200 millones de barriles.
+                      </p>
+                      <div class="white-button">
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-image-post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="left-text">
+                      <h4>BHP anuncia inversión de 258 millones de dólares en el campo Trión</h4>
+                      <p>
+                        La junta directiva de la petrolera australiana BHP aprobó una inversión de 258 millones de dólares en gastos de capital para llevar el proyecto petrolero Trión en México a la fase de diseño de ingeniería, en su sociedad con Petróleos Mexicanos (Pemex) 
+                        luego de haber obtenido el contrato mediante un concurso tipo farmout. 
+                      </p>
+                      <div class="white-button">
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="right-image">
+                      <img class="img-fluid " src="{% static 'img/noticias/noti4.jpg' %}" alt="No image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    
 
+
+          <div class="row my-5">
+            <div class="col col-12">
+                <p class="fs-1">Boletines</p>
+                <hr>
+            </div>
+          </div>
+
+          <section class="noticias my-services" data-section="section2">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="service-item">
+                    <div class="first-service-icon service-icon"></div>
+                    <h4>Importante</h4>
+                    <p>
+                      Petróleo mexicano supera los 70 dólares por primera vez desde 2018 
+                      El crudo nacional suma 5 semanas de ganancias, ante la posibilidad de que la OPEP 
+                      y sus aliados suban marginalmente la oferta.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="service-item">
+                    <div class="second-service-icon service-icon"></div>
+                    <h4>Para Recordar</h4>
+                    <p>
+                      Well Solution Equipment cuenta con sus respectivos protocolos de Bioseguridad que se ajusta a los requerimientos legales con el fin de reducir el contagio de la pandemia COVID-19.
+                    </p>                   
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="service-item">
+                    <div class="third-service-icon service-icon"></div>
+                    <h4>Herramientas</h4>
+                    <p>
+                      Utilizar herramientas de calidad reduce el riesgo de fallas inesperadas.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="service-item">
+                    <div class="fourth-service-icon service-icon"></div>
+                    <h4>Simulaciones</h4>
+                    <p>
+                      Es de suma importancia realizar simulaciones de los procesos para el correcto 
+                      análisis del comportamiento del pozo durante las operaciones de baja de 
+                      revestimiento, baja del liner.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>        
+        
+    
+        <!-- Scripts -->
+        <!-- Bootstrap core JavaScript -->       
+        <script>
+          //according to loftblog tut
+          $(".main-menu li:first").addClass("active");
+    
+          var showSection = function showSection(section, isAnimate) {
+            var direction = section.replace(/#/, ""),
+              reqSection = $(".section").filter(
+                '[data-section="' + direction + '"]'
+              ),
+              reqSectionPos = reqSection.offset().top - 0;
+    
+            if (isAnimate) {
+              $("body, html").animate(
+                {
+                  scrollTop: reqSectionPos
+                },
+                800
+              );
+            } else {
+              $("body, html").scrollTop(reqSectionPos);
+            }
+          };
+    
+          var checkSection = function checkSection() {
+            $(".section").each(function() {
+              var $this = $(this),
+                topEdge = $this.offset().top - 80,
+                bottomEdge = topEdge + $this.height(),
+                wScroll = $(window).scrollTop();
+              if (topEdge < wScroll && bottomEdge > wScroll) {
+                var currentId = $this.data("section"),
+                  reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+                reqLink
+                  .closest("li")
+                  .addClass("active")
+                  .siblings()
+                  .removeClass("active");
+              }
+            });
+          };
+    
+          $(".main-menu").on("click", "a", function(e) {
+            e.preventDefault();
+            showSection($(this).attr("href"), true);
+          });
+    
+          $(window).scroll(function() {
+            checkSection();
+          });
+        </script>
+
+    
 </section>
