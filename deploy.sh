@@ -88,7 +88,7 @@ function deploy {
     limpiar_directorio_trabajo
     mv $WORkING_DIR/src/*  $WORkING_DIR
     eliminar_archivo "src"
-    echo "import wellsolutions.wsgi import application" > passenger_wsgi.py
+    echo "from wellsolutions.wsgi import application" > passenger_wsgi.py
 
     # Configuracion de los archivos estaticos
     $PYTHON manage.py collectstatic
