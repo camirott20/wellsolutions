@@ -14,6 +14,8 @@ function validar_entorno_virtual {
     echo "No existe el entorno virtual configurado en: $VIRTUAL_ENV"
     exit 1
   fi
+
+  source $VIRTUAL_ENV/bin/3.8/bin/activate
 }
 
 function binario_instalado {
@@ -79,8 +81,7 @@ function deploy {
     # Establece el directorio de trabajo
     cd $WORkING_DIR
 
-    # Inicia el directorio virtual e instala las dependencias
-    source $VIRTUAL_ENV/bin/3.8/bin/activate
+    # Instala las dependencias
     $PIP install -r requirements/prod.txt
 
     # Elimina los archivos que no son necesario en el directorio de trabajo
