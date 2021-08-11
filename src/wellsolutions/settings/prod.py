@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False 
 
-ALLOWED_HOSTS = ['www.wellsolutions.com.mx']
+ALLOWED_HOSTS = ['www.wellsolutions.com.mx', 'wellsolutions.com.mx']
 
 INSTALLED_APPS = DJANGO_APPS + APPS_THIRD_PARTY + APPS
 
