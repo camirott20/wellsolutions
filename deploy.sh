@@ -14,6 +14,8 @@ function validar_entorno_virtual {
     echo "No existe el entorno virtual configurado en: $VIRTUAL_ENV"
     exit 1
   fi
+
+  source $VIRTUAL_ENV/bin/3.8/bin/activate
 }
 
 function binario_instalado {
@@ -79,15 +81,14 @@ function deploy {
     # Establece el directorio de trabajo
     cd $WORkING_DIR
 
-    # Inicia el directorio virtual e instala las dependencias
-    source $VIRTUAL_ENV/bin/3.8/bin/activate
+    # Instala las dependencias
     $PIP install -r requirements/prod.txt
 
     # Elimina los archivos que no son necesario en el directorio de trabajo
     limpiar_directorio_trabajo
     mv $WORkING_DIR/src/*  $WORkING_DIR
     eliminar_archivo "src"
-    echo "import wellsolutions.wsgi import application" > passenger_wsgi.py
+    echo "from wellsolutions.wsgi import application" > passenger_wsgi.py
 
     # Configuracion de los archivos estaticos
     $PYTHON manage.py collectstatic
