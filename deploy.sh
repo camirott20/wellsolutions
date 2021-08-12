@@ -53,6 +53,7 @@ function limpiar_directorio_trabajo {
   eliminar_archivo ".gitignore"
   eliminar_archivo ".git"
   eliminar_archivo "requirements"
+  eliminar_archivo "deploy.sh"
 }
 
 function mover_archivos_estaticos {
