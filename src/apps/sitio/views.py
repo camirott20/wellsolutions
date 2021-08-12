@@ -1,12 +1,12 @@
-
 from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponseRedirect
+from django.conf import settings
+from django.template.loader import render_to_string
 from django.template.response import TemplateResponse
+from django.urls import reverse_lazy
 from django.views.generic.base import TemplateView
 from django.views.generic import FormView
-from django.urls import reverse_lazy
 from .forms import ContactForm
-from django.http import HttpResponseRedirect
-from django.template.loader import render_to_string
 
 
 class PageView(TemplateView):
@@ -45,7 +45,7 @@ class SendEmailView(FormView):
             try:
                 context = { 'subject': subject, 'message': message, 'from_email': from_email, 'nombre': nombre }
                 html_body = render_to_string("sitio/email_contact.html", context)
-                send_mail(subject, message, from_email, ['info.@wellsolutions.com.mx'], html_message=html_body)
+                send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER], html_message=html_body)
                 self.message_sent = True
             except BadHeaderError:
                 pass
