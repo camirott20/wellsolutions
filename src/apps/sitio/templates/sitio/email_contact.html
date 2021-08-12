@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <style type="text/css">
+        body {
+            background-color: #f6f6f6;
+            font-family: sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .content {
+            box-sizing: border-box;
+            display: block;
+            margin: 0 auto;
+            max-width: 580px;
+            padding: 10px;
+        }
+
+        .main {
+            background: #ffffff;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        .footer {
+            clear: both;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer td, .footer p, .footer span, .footer a {
+            color: #999999;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .content-block {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        table, tr, th, td {
+            border: none !important;
+        } 
+
+        table {
+            width: 100%;
+            margin: auto;
+        }
+        table tr {
+            width: 100%;
+        }
+        table th, table td {
+            box-sizing: border-box;
+            padding: 15px;
+        }
+        table thead th {
+            background: #000;
+            color: #fff;
+            text-align: left;
+        }
+        table tbody {
+            text-align: left;
+        }
+        table tbody th {
+            background: #eee;
+        }
+
+        .table {
+            width: 420px;
+            margin-top: 40px;
+        }
+        .table tr {
+            display: block;
+            width: 100%;
+        }
+        .table thead {
+            display: none;
+        }
+        .table tbody {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+        }
+        .table tbody th {
+            list-style: none;
+        }
+
+        .table tbody th, .table tbody td {
+            width: 100%;
+            display: list-item;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <table class="main">
+            <tbody>
+                <tr>
+                    <td class="wrapper">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hola,</font></font></p>
+                                        <p>Alguien esta intentado contactarte.</p>
+                                        <p>A continuacion, se realcionan los datos:</p>
+                                        <table class="table" >
+                                            <tbody>
+                                                <tr>
+                                                <td align="center">
+                                                    <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    <strong>Nombre </strong> 
+                                                                </th>
+                                                                <td>
+                                                                    {{ nombre }}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <strong>Correo Electrónico</strong>
+                                                                </th>
+                                                                <td>
+                                                                    {{ from_email }}
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <strong>Mensaje</strong>
+                                                                </th>
+                                                                <td>
+                                                                    {{ message }}
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                        </table> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer">
+            <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="content-block">
+                            <span class="apple-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                WellSolutions, Mexico, Tabasco Villa Hermosa</font></font>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

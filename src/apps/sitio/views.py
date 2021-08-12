@@ -6,6 +6,7 @@ from django.views.generic import FormView
 from django.urls import reverse_lazy
 from .forms import ContactForm
 from django.http import HttpResponseRedirect
+from django.template.loader import render_to_string
 
 
 class PageView(TemplateView):
@@ -38,10 +39,13 @@ class SendEmailView(FormView):
         subject = 'Te estan intentando contactar'
         message = form.cleaned_data['mensaje']
         from_email = form.cleaned_data['email']
+        nombre = form.cleaned_data['nombre']
 
         if subject and message and from_email:
             try:
-                send_mail(subject, message, from_email, ['admin@wellsolutions.com'])
+                context = { 'subject': subject, 'message': message, 'from_email': from_email, 'nombre': nombre }
+                html_body = render_to_string("sitio/email_contact.html", context)
+                send_mail(subject, message, from_email, ['info.@wellsolutions.com.mx'], html_message=html_body)
                 self.message_sent = True
             except BadHeaderError:
                 pass

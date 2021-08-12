@@ -4,7 +4,7 @@
 readonly HOME_USER="${HOME}"
 readonly VIRTUAL_ENV="$HOME_USER/virtualenv/wellsolutions"
 readonly WORkING_DIR="$HOME_USER/wellsolutions"
-readonly REPO_GIT="https://github.com/yrrodriguezb/wellsolutions.git"
+readonly REPO_GIT="https://github.com/camirott/wellsolutions.git"
 readonly DJANGO_STATIC_DIR="$WORkING_DIR/static"
 readonly APP_STATIC_ROOT="$HOME_USER/public_html"
 readonly APP_STATIC_DIR="$APP_STATIC_ROOT/static"
@@ -53,6 +53,7 @@ function limpiar_directorio_trabajo {
   eliminar_archivo ".gitignore"
   eliminar_archivo ".git"
   eliminar_archivo "requirements"
+  eliminar_archivo "deploy.sh"
 }
 
 function mover_archivos_estaticos {
