@@ -1,5 +1,5 @@
+{% load static %}
 <section id="nosotros" class="my-5">
-
     <div class="row my-5">
       <div class="col col-12">
           <p class="fs-1">Nosotros</p>
@@ -17,31 +17,97 @@
       <li class="nav-item" role="presentation">
         <button class="nav-link rounded-pill" id="pills-vision-tab" data-bs-toggle="pill" data-bs-target="#pills-vision" type="button" role="tab" aria-controls="pills-vision" aria-selected="false">Visión</button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-pill" id="pills-politica-tab" data-bs-toggle="pill" data-bs-target="#pills-politica" type="button" role="tab" aria-controls="pills-politica" aria-selected="false">Política</button>
+      </li>
     </ul>
     <div class="tab-content py-5" id="pills-tabContent">
         <div class="tab-pane fade active show" id="pills-quienes-somos" role="tabpanel" aria-labelledby="pills-quienes-somos-tab">
-            <p>
-                Somos una compañia prestadora de servicios de suministro, aseguramiento, asesoria y control de calidad en herramientas y procesos de la industria de Petróleo y Gas.
-            </p>
+          <div class="container overflow-hidden">
+            <div class="row gx-5">
+              <div class="col col-12 col-sm-6 col-md-6">
+                <div class="p-3">
+                  <img class="img-fluid " src="{% static 'img/logo-md.png' %}"/>
+                </div>
+              </div>
+              <div class="col col-12 col-sm-6 col-md-6">
+                <div class="p-3 border bg-light">
+                  <p>
+                    Somos una compañia prestadora de servicios de suministro, aseguramiento, asesoria y control de calidad en herramientas y procesos de la industria de Petróleo y Gas.
+                  </p>    
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="tab-pane fade" id="pills-mision" role="tabpanel" aria-labelledby="pills-mision-tab">
-            <p>
-                <strong>Well Solutions.</strong>
-                es una compañia cuto objetivo es desarrollar, optimizar y aplicar procesos de aseguramiento
-                y control de calidad enfocados a reducir fallas estructurales, electronicas y mecanicas de los 
-                diferentes equipos y herramientas utilziadas en la industria del petróleo y gas, buscando evitar impactos operacionales
-                negativos que puedan afectar la integridad de personas, medio ambiente e indicadores de gestión 
-                de nuestros clientes. Igualmente posicionarnos como proveedores de herramientas de alta calidad con tiempos
-                de entrega cortos y enfocados en el desarrollo denámico de procedos logísticos dentro de la
-                cadena de suministro.
-            </p>
+            <div class="container overflow-hidden">
+              <div class="row gx-5">
+                <div class="col col-12 col-sm-6 col-md-6">
+                  <div class="p-3">
+                    <img class="img-fluid " src="{% static 'img/logo-md.png' %}"/>
+                  </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6">
+                  <div class="p-3 border bg-light">
+                    <p>
+                      <strong>Well Solutions.</strong>
+                      es una compañia cuto objetivo es desarrollar, optimizar y aplicar procesos de aseguramiento
+                      y control de calidad enfocados a reducir fallas estructurales, electronicas y mecanicas de los 
+                      diferentes equipos y herramientas utilziadas en la industria del petróleo y gas, buscando evitar impactos operacionales
+                      negativos que puedan afectar la integridad de personas, medio ambiente e indicadores de gestión 
+                      de nuestros clientes. Igualmente posicionarnos como proveedores de herramientas de alta calidad con tiempos
+                      de entrega cortos y enfocados en el desarrollo denámico de procedos logísticos dentro de la
+                      cadena de suministro.
+                    </p> 
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
         <div class="tab-pane fade" id="pills-vision" role="tabpanel" aria-labelledby="pills-vision-tab">
-            <p>
-                Ser considerados como una opcion viable y oportuna en el suministro de herramientas, posicionarnos como una
-                compañia lider en el aeguramiento de colgadores y herramientas de completamiento breindando una alternativa 
-                adicional para minimizar las falls operacionales de las compañias que suministran este tipo de herramientas.
-            </p>
+          <div class="container overflow-hidden">
+            <div class="row gx-5">
+              <div class="col col-12 col-sm-6 col-md-6">
+                <div class="p-3">
+                  <img class="img-fluid " src="{% static 'img/logo-md.png' %}"/>
+                </div>
+              </div>
+              <div class="col col-12 col-sm-6 col-md-6">
+                <div class="p-3 border bg-light">
+                  <p>
+                    Ser considerados como una opcion viable y oportuna en el suministro de herramientas, posicionarnos como una
+                    compañia lider en el aeguramiento de colgadores y herramientas de completamiento breindando una alternativa 
+                    adicional para minimizar las falls operacionales de las compañias que suministran este tipo de herramientas.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="tab-pane fade" id="pills-politica" role="tabpanel" aria-labelledby="pills-politica-tab">
+          <div class="container overflow-hidden">
+            <div class="row gx-5">
+              <div class="col col-12 col-sm-6 col-md-6">
+                <div class="p-3">
+                  <img class="img-fluid " src="{% static 'img/logo-md.png' %}"/>
+                </div>
+              </div>
+              <div class="col col-12 col-sm-6 col-md-6">
+                <div class="p-3 border bg-light">
+                  <p>La política de Well Solutions es garantizar un manejo responsable de todas sus actividades, desde el suministro de un producto hasta su utilización, e incluso después de su uso. La excelencia en el desempeño de HSE es esencial para esta política y Well Solutions se compromete a:</p>
+                  <p>Ser un miembro responsable de la sociedad, comprometido con la mejora continua en materia de HSE.</p>
+                  <p>Proporcionar un ambiente de trabajo sano y saludable a todos sus colaboradores.</p>
+                  <p>Minimizar el impacto ambiental y optimizar la utilización de los recursos naturales.</p>
+                  <p>Cumplir o exceder las regulaciones, las exigencias legales y los acuerdos internacionales.</p>
+                  <p>Asegurar que las consideraciones en materia de HSE estén integradas en todas las actividades.</p>
+                  <p>Desarrollar una cultura que aliente a los colaboradores a asumir una responsabilidad personal en materia de HSE.</p>
+                  <p>Comunicar abiertamente el desempeño en materia de HSE y entablar un diálogo con las partes interesadas.</p>
+                  <p>Tener el objetivo de eliminar todos los incidentes y lesiones físicas Esta política ha sido adoptada por el Directorio y se aplica a todos los colaboradores y a todas las actividades. El cumplimiento de esta política es obligatorio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
 </section>

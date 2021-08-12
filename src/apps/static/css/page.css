@@ -27,6 +27,11 @@ html.scroll-behavior-auto {
     transition: color ease .5s;
 }
 
+.dropdown-menu > li > a:hover {
+    background-color: transparent;
+    color: #00d1b2;
+}
+
 footer a:hover {
     color: #00d1b2 !important;
 }
@@ -89,28 +94,6 @@ footer a:hover {
     background-color: #414141;
     color: #fff;
 }
-
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #a43f49;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: all 0.5s;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-button:hover {
-    outline: none;
-    background-color: #a43f49;
-    color: #fff;
-}
-
 
 /* Left & Right Post */
 
