@@ -14,8 +14,6 @@ function validar_entorno_virtual {
     echo "No existe el entorno virtual configurado en: $VIRTUAL_ENV"
     exit 1
   fi
-
-  source $VIRTUAL_ENV/3.8/bin/activate
 }
 
 function binario_instalado {
