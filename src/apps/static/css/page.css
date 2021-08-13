@@ -215,8 +215,6 @@ footer a:hover {
 }
 
 
-   
-
 @media (min-width: 992px) {
     .navbar-shrink {
         padding-top: 0;
@@ -229,5 +227,12 @@ footer a:hover {
     .card > img {
         width: inherit;
         min-width: 100%;
+    }
+
+    #carouselExampleControls {
+        max-height: 60vh !important;   
+    }
+    .carousel-item > .img-fluid.w-100.vh-100 {
+        max-height: 60vh;
     }
 }
