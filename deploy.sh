@@ -15,7 +15,7 @@ function validar_entorno_virtual {
     exit 1
   fi
 
-  source $VIRTUAL_ENV/bin/3.8/bin/activate
+  source $VIRTUAL_ENV/3.8/bin/activate
 }
 
 function binario_instalado {
